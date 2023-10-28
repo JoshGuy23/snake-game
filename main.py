@@ -14,6 +14,12 @@ def setup_screen():
 
 
 def play_game(snake, screen):
+    screen.listen()
+    screen.onkey(snake.up, "Up")
+    screen.onkey(snake.left, "Left")
+    screen.onkey(snake.down, "Down")
+    screen.onkey(snake.right, "Right")
+
     playing = True
     while playing:
         screen.update()
