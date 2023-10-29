@@ -21,6 +21,12 @@ class Snake:
             x_pos -= 20
             self.snake.append(new_segment)
 
+    def add_segment(self):
+        new_segment = self.create_segment()
+        tail = self.snake[-1]
+        new_segment.setposition(x=tail.xcor(), y=tail.ycor())
+        self.snake.append(new_segment)
+
     def create_segment(self):
         new_segment = Turtle()
         new_segment.shape("square")

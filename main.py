@@ -1,7 +1,7 @@
 from turtle import Screen
 from snake import Snake
+from food import Food
 import time
-# Notes: Turtles are 20 pixels by 20 pixels
 
 
 def setup_screen():
@@ -14,6 +14,7 @@ def setup_screen():
 
 
 def play_game(snake, screen):
+    food = Food()
     screen.listen()
     screen.onkey(snake.up, "Up")
     screen.onkey(snake.left, "Left")
@@ -25,6 +26,9 @@ def play_game(snake, screen):
         screen.update()
         time.sleep(0.1)
         snake.move()
+        if snake.head.distance(food) < 15:
+            food.generate()
+            snake.add_segment()
 
 
 def start():
