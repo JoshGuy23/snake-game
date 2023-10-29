@@ -33,6 +33,10 @@ def play_game(snake, screen):
             snake.add_segment()
             scoreboard.update_score()
 
+        if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+            playing = False
+            scoreboard.game_over()
+
 
 def start():
     screen = setup_screen()
