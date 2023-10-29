@@ -33,9 +33,16 @@ def play_game(snake, screen):
             snake.add_segment()
             scoreboard.update_score()
 
-        if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+        if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 300 or snake.head.ycor() < -280:
             playing = False
             scoreboard.game_over()
+
+        for segment in snake.snake:
+            if segment == snake.head:
+                pass
+            elif snake.head.distance(segment) < 10:
+                playing = False
+                scoreboard.game_over()
 
 
 def start():
