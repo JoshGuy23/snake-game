@@ -1,6 +1,7 @@
 from turtle import Screen
 from snake import Snake
 from food import Food
+from scoreboard import Scoreboard
 import time
 
 
@@ -15,6 +16,7 @@ def setup_screen():
 
 def play_game(snake, screen):
     food = Food()
+    scoreboard = Scoreboard()
     screen.listen()
     screen.onkey(snake.up, "Up")
     screen.onkey(snake.left, "Left")
@@ -29,6 +31,7 @@ def play_game(snake, screen):
         if snake.head.distance(food) < 15:
             food.generate()
             snake.add_segment()
+            scoreboard.update_score()
 
 
 def start():
