@@ -6,7 +6,7 @@ The file "main.py" runs with "snake.py", "food.py", and "scoreboard.py".
 
 
 
-Controls:
+## Controls: ##
 
 Up Arrow Key - Turn the snake to the top of the screen
 
