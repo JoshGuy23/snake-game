@@ -66,3 +66,10 @@ class Snake:
         # This function is used to turn the snake down.
         if self.head.heading() != UP:
             self.head.setheading(DOWN)
+
+    def reset(self):
+        for segment in self.snake:
+            segment.goto(1000, 1000)
+        self.snake.clear()
+        self.create_snake()
+        self.head = self.snake[0]

@@ -39,14 +39,14 @@ def play_game(snake, screen):
 
         # If snake runs into wall, game over.
         if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 300 or snake.head.ycor() < -280:
-            playing = False
-            scoreboard.game_over()
+            scoreboard.restart()
+            snake.reset()
 
         # If snake runs into tail: game over.
         for segment in snake.snake[1:]:
             if snake.head.distance(segment) < 10:
-                playing = False
-                scoreboard.game_over()
+                scoreboard.restart()
+                snake.reset()
 
 
 def start():
