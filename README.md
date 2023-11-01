@@ -2,7 +2,9 @@
 
 This project is a simple game of Snake.
 
-The file "main.py" runs with "snake.py", "food.py", and "scoreboard.py".
+The file "main.py" runs with "snake.py", "food.py", "scoreboard.py", and "data.txt".
+
+If you want to stop the game, either close the game window or hit your IDE's stop program button.
 
 
 
