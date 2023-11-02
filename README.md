@@ -4,7 +4,7 @@ This project is a simple game of Snake.
 
 The file "main.py" runs with "snake.py", "food.py", "scoreboard.py", and "data.txt".
 
-Data.txt saves the user's current high score.
+data.txt saves the user's current high score.
 
 
 
