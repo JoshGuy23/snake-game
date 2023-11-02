@@ -1,4 +1,4 @@
-from turtle import Screen
+import turtle
 from snake import Snake
 from food import Food
 from scoreboard import Scoreboard
@@ -7,7 +7,7 @@ import time
 
 def setup_screen():
     # This function sets up the play screen
-    screen = Screen()
+    screen = turtle.Screen()
     screen.setup(height=600, width=600)
     screen.bgcolor("black")
     screen.title("Snake")
@@ -24,6 +24,7 @@ def play_game(snake, screen):
     screen.onkey(snake.left, "Left")
     screen.onkey(snake.down, "Down")
     screen.onkey(snake.right, "Right")
+    screen.onkey(turtle.bye, "q")
 
     playing = True
     while playing:
